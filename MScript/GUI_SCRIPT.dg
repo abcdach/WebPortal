@@ -35,7 +35,7 @@ var temp =`
 					...[class],col-4
 					...{
 ...html,<p class="h5">Screenshot</p>
-<p><img src="PIC/Collaps.png" width="200" alt="Stickman" text-align: center ></p>						
+<p><img src="MScript/PIC/Collaps.png" width="200" alt="Stickman" text-align: center ></p>						
 					...}					
 				...}
 			...}
@@ -93,7 +93,7 @@ var _Image_ =`
 					...[class],col-4
 					...{
 ...html,<p class="h5">Screenshot</p>
-<p><img src="PIC/
+<p><img src="MScript/PIC/
 `;
 var _End_ =`" width="200" alt="Stickman" text-align: center ></p>
 					...}					
