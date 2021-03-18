@@ -1,0 +1,313 @@
+var temp =`
+//////////////////////////////////////////////////////////////////////	
+		...[article],Temp
+		...{
+			...[class],container
+			...{
+				...[class],row
+				...{
+					...[class],col-6
+					...{
+...html,<p class="h5">Structure</p>
+...codemirror_dg,		
+...html,<p class="h5">Relative (functionse/elements)</p>
+...codemirror_dg,				
+					...}
+					...[class],col-6
+					...{
+...html,<p class="h5">Description</p>
+<a>Description text</a> 				
+					...}					
+				...}
+			...}
+			...[class],container
+			...{
+				...[class],row
+				...{
+					...[class],col-8
+					...{
+...html,<p class="h5">Example</p>
+...codemirror_dg,
+
+					...}
+					...[class],col-4
+					...{
+...html,<p class="h5">Screenshot</p>
+<p><img src="PIC/001.png" width="200" alt="Stickman" text-align: center ></p>
+					...}					
+				...}
+			...}			
+		...}
+	...}	
+//////////////////////////////////////////////////////////////////////	
+`;
+
+
+
+
+var MyGUI_SCRIPT =`
+
+...[page],IS_HTML_BODY
+...{
+
+...[container]
+...{
+	...[section],MSCRIPT
+	...{
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////	
+		...[article],Page
+		...{
+			...[class],container
+			...{
+				...[class],row
+				...{
+					...[class],col-6
+					...{
+...html,<p class="h5">Structure</p>
+...codemirror_dg,		
+..[page],name 
+..{ 
+	*GUI Content* 
+..}
+...html,<p class="h5">Relative (functionse/elements)</p>
+...codemirror_dg,		
+..create_page, NewPageName
+Create_Page('NewPageName'); 
+Page_change('PageName');		
+					...}
+					...[class],col-6
+					...{
+...html,<p class="h5">Description</p>
+<a>The page is the primary unit of interaction in jQuery 
+Mobile and is used to group content into logical views 
+that can be animated in and out of view with page transitions.</a> 				
+					...}					
+				...}
+			...}
+			...[class],container
+			...{
+				...[class],row
+				...{
+					...[class],col-8
+					...{
+...html,<p class="h5">Example</p>
+...codemirror_dg,
+..[page],1
+..{
+	..header_text,This is a page 1
+	..create_page,2
+	..button, Go to page 2, Page_change('2');
+..}
+..[page],2
+..{
+	..header_text,This is a page 2
+	..button, Go to page 1, Page_change('1');
+..}
+					...}
+					...[class],col-4
+					...{
+					...}					
+				...}
+			...}			
+		...}
+	...}	
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////	
+		...[article],Collaps
+		...{
+			...[class],container
+			...{
+				...[class],row
+				...{
+					...[class],col-6
+					...{
+...html,<p class="h5">Structure</p>
+...codemirror_dg,		
+..[collaps],name 
+..{ 
+          *GUI Content* 
+..}
+...html,<p class="h5">Relative (functionse/elements)</p>
+...codemirror_dg,				
+					...}
+					...[class],col-6
+					...{
+...html,<p class="h5">Description</p>
+<a>Collapsibles are simple widgets that allow you to 
+expand or collapse content when tapped and are useful 
+in mobile to provide a compact presentation of content.</a> 				
+					...}					
+				...}
+			...}
+			...[class],container
+			...{
+				...[class],row
+				...{
+					...[class],col-8
+					...{
+...html,<p class="h5">Example</p>
+...codemirror_dg,
+..[page],1
+..{
+	..[collaps],collaps           
+	..{
+		..label,label
+		..button,button,
+	..}
+..}
+					...}
+					...[class],col-4
+					...{
+...html,<p class="h5">Screenshot</p>
+<p><img src="PIC/Collaps.png" width="200" alt="Stickman" text-align: center ></p>
+					...}					
+				...}
+			...}			
+		...}
+	...}	
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////	
+		...[article],Popup
+		...{
+			...[class],container
+			...{
+				...[class],row
+				...{
+					...[class],col-6
+					...{
+...html,<p class="h5">Structure</p>
+...codemirror_dg,
+..[popup](ID) ,10px 20px
+..{ 
+          *GUI Content* 
+..}		
+...html,<p class="h5">Relative (functionse/elements)</p>
+...codemirror_dg,
+Popup_Open('ID');				
+					...}
+					...[class],col-6
+					...{
+...html,<p class="h5">Description</p>
+<a>The popup widget can be used for various types of popups. 
+From a small tooltip popup to a large photo lightbox.</a> 				
+					...}					
+				...}
+			...}
+			...[class],container
+			...{
+				...[class],row
+				...{
+					...[class],col-8
+					...{
+...html,<p class="h5">Example</p>
+...codemirror_dg,
+..[page],1
+..{
+        ..button, Open Popup, Popup_Open('ID');
+        ..[popup](ID) ,10px 20px
+        ..{ 
+	        ..label,label
+                   ..button,button,
+        ..}
+..}
+					...}
+					...[class],col-4
+					...{
+...html,<p class="h5">Screenshot</p>
+<p><img src="PIC/Popup.png" width="200" alt="Stickman" text-align: center ></p>
+					...}					
+				...}
+			...}			
+		...}
+	...}	
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////	
+		...[article],Panel
+		...{
+			...[class],container
+			...{
+				...[class],row
+				...{
+					...[class],col-6
+					...{
+...html,<p class="h5">Structure</p>
+...codemirror_dg,
+..[panel](ID)
+..{ 
+          *GUI Content* 
+..}		
+...html,<p class="h5">Relative (functionse/elements)</p>
+...codemirror_dg,
+Panel_Open('ID');				
+					...}
+					...[class],col-6
+					...{
+...html,<p class="h5">Description</p>
+<a>Flexible by design, panels can be used for navigation, forms, inspectors and more.</a> 				
+					...}					
+				...}
+			...}
+			...[class],container
+			...{
+				...[class],row
+				...{
+					...[class],col-8
+					...{
+...html,<p class="h5">Example</p>
+...codemirror_dg,
+..[page],1
+..{
+	..button, Open Panel, Panel_Open('pa1');
+	..[panel](pa1)
+	..{
+		..label,
+		..label,Host:
+		..input_text(it1),
+		..label,Port:
+		..input_text(it2),
+		..label,Device ID:
+		..input_text(it3),
+	..}
+..}
+					...}
+					...[class],col-4
+					...{
+...html,<p class="h5">Screenshot</p>
+<p><img src="PIC/Panel.png" width="200" alt="Stickman" text-align: center ></p>
+					...}					
+				...}
+			...}			
+		...}
+	...}
+//////////////////////////////////////////////////////////////////////	
+//////////////////////////////////////////////////////////////////////	
+	...[section],MSCRIPT3
+	...{
+		...[article],Panel3
+		...{
+		...}
+	...}
+	...[section],MSCRIPT4
+	...{
+		...[article],Panel4
+		...{
+		...}
+	...}	
+...}
+...}
+
+`;
+var MyGUI_SCRIPT = MyGUI_SCRIPT;
+
+
+
+
+
+
+
+
+
+
+
+
