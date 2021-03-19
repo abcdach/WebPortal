@@ -191,8 +191,8 @@ From a small tooltip popup to a large photo lightbox.
         ..button, Open Popup, Popup_Open('ID');
         ..[popup](ID) ,10px 20px
         ..{ 
-	        ..label,label
-                   ..button,button,
+			..label,label
+			..button,button,
         ..}
 ..}				
 				
@@ -696,7 +696,7 @@ HTML დოკუმენტში ჩავამატოთ ნების�
 ჯავაფუნქცია ეშვება ავტომატურად, როდესაც მოხდება იმ PAGE-ის 
 შექმნა რომელშიც არის მოთავსებული მოცენმული სკრიპტის ელემენტი.						
 `+_Example_+`
-		..[page],3
+..[page],3
 ..{
     ..js_pc, console.log(" Page Created ");
 ..}
@@ -835,7 +835,7 @@ Write_Memory ფუციის გამოყენებით იმფო�
 			put_input_text('it_pop1_Host',Read_Memory('mem_Host'));
 			put_input_text('it_pop1_Port',Read_Memory('mem_Port'));
 			put_input_text('it_pop1_Device_ID',Read_Memory('mem_Device_ID'));
-		                put_input_text('it_pop1_Device_Name',Read_Memory('mem_Device_Name'));
+		    put_input_text('it_pop1_Device_Name',Read_Memory('mem_Device_Name'));
 		}
 			
 	..js_pc, Refresh_isConfig();
