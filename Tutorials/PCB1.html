@@ -54,13 +54,30 @@
 	<script src="../Gui_Engine/GUI_ELEMENTS.js"></script>
 	<script src="../NAV_SCRIPT.dg"></script>		
 	<!--..................-->
-	 
+	 <script src="http://www.youtube.com/player_api"></script>
 	 
 	 
 </head>
 <body data-role="IS_HTML_BODY" >
 	<script>GUI_Processor(MyNAV_SCRIPT);</script>  
-	
+	<script>	
+		var player, seconds = 0;
+		function onYouTubeIframeAPIReady() {
+			console.log("player");
+			player = new YT.Player('player', {
+				events: {
+				  'onReady': onPlayerReady
+				}
+			  });
+		}
+		function onPlayerReady(event) {event.target.playVideo();}
+		function seek(sec){
+			if(player){
+				seconds += sec;
+				player.seekTo(sec, true);player.playVideo();
+			}
+		}	
+	</script>	
 <script>
 var body = document.body,
     html = document.documentElement;
@@ -68,13 +85,13 @@ var isheight = Math.max( body.scrollHeight, body.offsetHeight,
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
 </script>  
 <!--
-0.00	0		Start
-0.22	22		Create Project
-1.07	67		Add Schematic file
-1.46	106		Add component to the schematic
-3.53	233		Create Schematic Library
-4.30	270		Create a component to the schematic library
-8.46	526		Create PCB Component
+00:00	0		Start
+00:22	22		Create Project
+01:07	67		Add Schematic file
+01:46	106		Add component to the schematic
+03:53	233		Create Schematic Library
+04.30	270		Create a component to the schematic library
+08.46	526		Create PCB Component
 10.30	630		Create PCB Library
 11.07	667		Preparation of the Component dimensions
 18.30	1112	Joining PCB component to the schematic component
@@ -130,7 +147,7 @@ $('<style>').text("#myOverflow {max-width: 600px;max-height: "+(isheight-200)+"p
 		</div>	  
 
 		<div class="class= col-lg-9 offset-lg-3 bg-light my-col">
-			<script src="http://www.youtube.com/player_api"></script>
+			
 			
 			<div class="container">
 				</br>
@@ -153,24 +170,7 @@ $('<style>').text("#myOverflow {max-width: 600px;max-height: "+(isheight-200)+"p
 			</div>
 
 		
-	<script>	
-		var player, seconds = 0;
-		function onYouTubeIframeAPIReady() {
-			console.log("player");
-			player = new YT.Player('player', {
-				events: {
-				  'onReady': onPlayerReady
-				}
-			  });
-		}
-		function onPlayerReady(event) {event.target.playVideo();}
-		function seek(sec){
-			if(player){
-				seconds += sec;
-				player.seekTo(sec, true);player.playVideo();
-			}
-		}	
-	</script>			
+			
 		
 		
 
