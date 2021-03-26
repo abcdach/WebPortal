@@ -1,0 +1,125 @@
+document.write(`
+<aside class="bd-aside ">
+	<h2 class="h6 pt-0 pb-3 mb-3 border-bottom">On this page</h2>
+</aside> 
+<div class="list-group list-group-flush overflow-auto vh-100 h-25" id="myOverflow">    
+	<aside class="bd-aside ">
+		<nav class="small" id="toc">
+			<ul class="list-unstyled">
+				<li class="">
+					<button class="btn d-inline-flex align-items-center collapsed" 
+					data-bs-toggle="collapse" 
+					aria-expanded="false" 
+					data-bs-target="#contents-collapse1" 
+					aria-controls="contents-collapse">Form</button>
+					<ul class="list-unstyled  collapse" id="contents-collapse1">
+						<li><a onclick="isArticle('Page')"		class="d-inline-flex align-items-center rounded" href="#isPCB">Page</a></li>		
+						<li><a onclick="isArticle('Collaps')"	class="d-inline-flex align-items-center rounded" href="#isPCB">Collaps</a></li>
+						<li><a onclick="isArticle('Popup')"		class="d-inline-flex align-items-center rounded" href="#isPCB">Popup</a></li>	
+						<li><a onclick="isArticle('Panel')"		class="d-inline-flex align-items-center rounded" href="#isPCB">Panel</a></li>
+						<li><a onclick="isArticle('Tab')"		class="d-inline-flex align-items-center rounded" href="#isPCB">Tab</a></li>
+						<li><a onclick="isArticle('Element Grouper')"    class="d-inline-flex align-items-center rounded" href="#isPCB">Element Grouper</a></li>
+					</ul>
+				</li>
+			</ul> 
+			<ul class="list-unstyled">
+				<li class="">
+					<button class="btn d-inline-flex align-items-center collapsed" 
+					data-bs-toggle="collapse" 
+					aria-expanded="false" 
+					data-bs-target="#contents-collapse2" 
+					aria-controls="contents-collapse">Components</button>
+					<ul class="list-unstyled  collapse" id="contents-collapse2">
+						<li><a onclick="isArticle('Button')"	class="d-inline-flex align-items-center rounded" href="#isPCB">Button</a></li>
+						<li><a onclick="isArticle('Flip')"		class="d-inline-flex align-items-center rounded" href="#isPCB">Flip</a></li>
+						<li><a onclick="isArticle('Slider')"	class="d-inline-flex align-items-center rounded" href="#isPCB">Slider</a></li>	
+						<li><a onclick="isArticle('Checkbox')"	class="d-inline-flex align-items-center rounded" href="#isPCB">Checkbox</a></li>	
+						<li><a onclick="isArticle('Radio')"		class="d-inline-flex align-items-center rounded" href="#isPCB">Radio</a></li>
+						<li><a onclick="isArticle('Select')"	class="d-inline-flex align-items-center rounded" href="#isPCB">Select</a></li>
+						<li><a onclick="isArticle('Listview')"	class="d-inline-flex align-items-center rounded" href="#isPCB">Listview</a></li>
+					</ul>
+				</li>
+			</ul> 
+			<ul class="list-unstyled">
+				<li class="">
+					<button class="btn d-inline-flex align-items-center collapsed" 
+					data-bs-toggle="collapse" 
+					aria-expanded="false" 
+					data-bs-target="#contents-collapse3" 
+					aria-controls="contents-collapse">Typography</button>
+					<ul class="list-unstyled  collapse" id="contents-collapse3">
+						<li><a onclick="isArticle('Label')"		class="d-inline-flex align-items-center rounded" href="#isPCB">Label</a></li>
+						<li><a onclick="isArticle('Info')"		class="d-inline-flex align-items-center rounded" href="#isPCB">Info</a></li>
+						<li><a onclick="isArticle('Textarea')"	class="d-inline-flex align-items-center rounded" href="#isPCB">Textarea</a></li>
+						<li><a onclick="isArticle('Input Text')"		class="d-inline-flex align-items-center rounded" href="#isPCB">Input Text</a></li>
+						<li><a onclick="isArticle('Input Password')"    class="d-inline-flex align-items-center rounded" href="#isPCB">Input Password</a></li>
+					</ul>
+				</li>
+			</ul> 
+			<ul class="list-unstyled">
+				<li class="">
+					<button class="btn d-inline-flex align-items-center collapsed" 
+					data-bs-toggle="collapse" 
+					aria-expanded="false" 
+					data-bs-target="#contents-collapse4" 
+					aria-controls="contents-collapse">Header</button>
+					<ul class="list-unstyled  collapse" id="contents-collapse4">
+						<li><a onclick="isArticle('Header Text')"		class="d-inline-flex align-items-center rounded" href="#isPCB">Header Text</a></li>
+						<li><a onclick="isArticle('Header Button')"		class="d-inline-flex align-items-center rounded" href="#isPCB">Header Button</a></li>				
+					</ul>
+				</li>
+			</ul> 
+			<ul class="list-unstyled">
+				<li class="">
+					<button class="btn d-inline-flex align-items-center collapsed" 
+					data-bs-toggle="collapse" 
+					aria-expanded="false" 
+					data-bs-target="#contents-collapse5" 
+					aria-controls="contents-collapse">Html & Java</button>
+					<ul class="list-unstyled  collapse" id="contents-collapse5">
+						<li><a onclick="isArticle('HTML')"				class="d-inline-flex align-items-center rounded" href="#isPCB">HTML</a></li>
+						<li><a onclick="isArticle('Java Script')"		class="d-inline-flex align-items-center rounded" href="#isPCB">Java Script</a></li>
+						<li><a onclick="isArticle('Java Script PC')"	class="d-inline-flex align-items-center rounded" href="#isPCB">Java Script PC</a></li>
+						<li><a onclick="isArticle('Java Script PI')"	class="d-inline-flex align-items-center rounded" href="#isPCB">Java Script PI</a></li>
+					</ul>
+				</li>
+			</ul> 
+			<ul class="list-unstyled">
+				<li class="">
+					<button class="btn d-inline-flex align-items-center collapsed" 
+					data-bs-toggle="collapse" 
+					aria-expanded="false" 
+					data-bs-target="#contents-collapse6" 
+					aria-controls="contents-collapse">Oter</button>
+					<ul class="list-unstyled  collapse" id="contents-collapse6">
+						<li><a onclick="isArticle('Event')"		class="d-inline-flex align-items-center rounded" href="#isPCB">Event</a></li>
+						<li><a onclick="isArticle('Memory')"	class="d-inline-flex align-items-center rounded" href="#isPCB">Memory</a></li>
+						<li><a onclick="isArticle('Timer')"		class="d-inline-flex align-items-center rounded" href="#isPCB">Timer</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="list-unstyled">
+				<li class="">
+					<button class="btn d-inline-flex align-items-center collapsed" 
+					data-bs-toggle="collapse" 
+					aria-expanded="false" 
+					data-bs-target="#contents-collapse7" 
+					aria-controls="contents-collapse">Exasmples</button>
+					<ul class="list-unstyled  collapse" id="contents-collapse7">
+						<li><a onclick="isArticle('MaxIOT Client-side')"	class="d-inline-flex align-items-center rounded" href="#isPCB">MaxIOT Client-side</a></li>
+						<li><a onclick="isArticle('MaxIOT Server-side')"	class="d-inline-flex align-items-center rounded" href="#isPCB">MaxIOT Server-side</a></li>
+					</ul>
+				</li>
+			</ul> 
+		</nav>  
+	</aside> 
+</div> 
+`);
+
+
+
+
+
+
+
+
