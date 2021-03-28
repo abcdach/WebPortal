@@ -1,0 +1,63 @@
+
+
+
+var MyNAV_SCRIPT_001 =`
+
+...[page],IS_HTML_BODY
+...{
+	...html,
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <div class="container-fluid">
+		<a class="navbar-brand" href="../is_index/is_index.html">MAXIOT SYSTEMS</a>
+		<button class="navbar-toggler" 
+			type="button" 
+			data-bs-toggle="collapse" 
+			data-bs-target="#navbarsExampleDefault" 
+			aria-controls="navbarsExampleDefault" 
+			aria-expanded="false" 
+			aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		  <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+		  
+		  
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Tutorials</a>
+			  <ul class="dropdown-menu" aria-labelledby="dropdown01">
+				<li><a class="dropdown-item" href="../Tutorials/PCB1.html">PCB Design</a></li>
+			  </ul>
+			</li>	
+
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Descriptions</a>
+			  <ul class="dropdown-menu" aria-labelledby="dropdown01">
+				<li><a class="dropdown-item" href="../Descriptions/MScript.html">MScript</a></li>
+			  </ul>
+			</li>
+
+
+	
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+...}
+`;
+var MyNAV_SCRIPT = MyNAV_SCRIPT_001;
+
+
+
+
+
+
+var MyNAV_SCRIPT_001 =`
+		  <form class="d-flex">
+			<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+			<button class="btn btn-outline-success" type="submit">Search</button>
+		  </form>
+`;
+
+
+
