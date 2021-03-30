@@ -699,7 +699,20 @@ case "MaxIOT Server-side":_Structure_(`
 ..}
 `);break;
 //////////////////////////////////////////////////////////////////////
-
+case "Theme":_Structure_(`
+`);_Relative_(`
+`);_Description_(`
+`);_Example_(`
+..[page],1
+..{
+	..button, Theme a, Theme_Change('1','a');
+	..button, Theme b, Theme_Change('1','b');
+	..button, Theme c, Theme_Change('1','c');
+	..button, Theme d, Theme_Change('1','d');
+	..button, Theme e, Theme_Change('1','e');
+..}
+`);break;
+//////////////////////////////////////////////////////////////////////
 
 
 

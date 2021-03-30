@@ -81,6 +81,29 @@ var My_SCRIPT_001 =`
 `;
 
 
+var My_SCRIPT_0012 =`
+
+..[page],1
+..{
+	..header_text,This is a page 1
+	..create_page,2
+	..button, Go to page 2, Page_change('2');
+	..button, Theme a, Theme_Change('a');
+	..button, Theme b, Theme_Change('b');
+	..button, Theme c, Theme_Change('c');
+	..button, Theme d, Theme_Change('d');
+	..button, Theme e, Theme_Change('e');
+..}
+..[page],2
+..{
+	
+	..header_text,This is a page 2
+	..button, Go to page 1, Page_change('1');
+	..button, Theme tttt, Theme_Change('e');
+
+..}	
+
+`;
 
 
 ///////////////////////////////////////////////////////
