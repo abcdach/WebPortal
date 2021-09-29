@@ -1,0 +1,190 @@
+
+document.write(`
+
+<!--######################################################################################-->  
+<h2 id="Sensor_Studio_Server" class="blog-post-title">Sensor Studio Server</h2>
+<p class="blog-post-meta">April 3, 2021 by <a href="#">David Chkhaidze</a></p>
+<p>ამ ბლოგში განხილულია Sensor Studio-ს სერვერის გამართვასთან დაკავშირებული ყველა საკითხები.</p>
+<hr>
+<p>
+<h4>სერვერის კოდი</h4>
+		
+<strong>Sensor studio</strong>-ს სერვერის კოდი დაწერილია <strong>python</strong> პროგრამირების ენის გამოყენებით.
+
+<pre  style="max-height: 30em; width: 60em;  _overflow: auto; font-size: 0.75em;">
+<code class="language-python line-numbers"><script src="SensorStudio/SensorStudioServer.py"></script></code>
+</pre>
+<!--p>ჩვენ შეგვიძლია განვათავსოთ ოპერაციული სისტემის რომელიმე დირექტორიაში სერვერის პროგრამის ფაილი შემდეგი bash კომანდის გამოყენებით:</p>
+<pre  style="max-height: 30em; width: 60em;  _overflow: auto; font-size: 0.75em;">
+<code class="language-bash _line-numbers">
+$ git Clone wwwwwwwwwwwwwwwwwwwwwwww
+
+</script></code>
+</pre-->
+</br>
+<h4>აუცილებელი პროგრამები სერვერისთვის</h4>
+<p><strong>Sensor studio</strong> სერვერი საჭიროებს გარკვეული პროგრამების დაინსტალირებას. ესენია:</p>
+<ul>
+  <li><a target="_blank" href="https://github.com/dpallot/simple-websocket-server">A Simple Websocket Server written in Python</a></li>
+  <li><a target="_blank" href="https://github.com/espressif/esptool">esptool.py</a></li>
+</ul>
+<pre  style="max-height: 30em; width: 60em;  _overflow: auto; font-size: 0.75em;">
+<code class="language-bash _line-numbers">
+$ sudo apt-get update
+
+$ pip install SimpleWebSocketServer
+
+$ pip install esptool
+
+</script></code>
+</pre>
+</br>
+
+<!--######################################################################################-->   
+ </br></br></br></br></br></br>
+<h2 id="Using_Code_Library" class="blog-post-title">Using Code Library</h2>
+<p class="blog-post-meta">April 3, 2021 by <a href="#">David Chkhaidze</a></p>
+<p>ამ ბლოგში განხილულია <strong>Code Library</strong>-ის გამოყენების ინსტრუქცია.</p>
+<hr>
+<p>Code Library-ში წარმოდგენილია პროექტები, რომლებიც შეიძლება მარტივად განხორციელდეს <strong>Sensor studio</strong>-ოს სისტემის საშუალებით.
+</br>ამისთვის შაჭიროა შემდეგი ნაბიჯების შესრულება:
+</p>
+
+<ol>
+	<li>ააწყეთ სურათში მოცემული ელექტრული სქმა.
+	</br></br><p><img src="SensorStudio/PIC/SEN_SHT21.jpg" width="25%" alt="Stickman" text-align: center ></p>
+	</li>
+	<li>დააჭირეთ <strong>Download bin</strong> ღილაკს და გადმოწერეთ <strong>NodeMCU</strong> დაფაში ასატვირთი ბინარული კოდი.</li>
+	<li>გადადით <strong>Sensor studio</strong>-ში და მოახდინეთ შემდეგი მოქმედებები
+		<ul>
+			<li><strong>System Board</strong>-ის სურათის თავზე არსებულ ველში შეიყვანეთ
+			<strong>Sensor studio</strong> სერვერის მქონე მიკროკომპიუტერის ქსელის მისამართი
+			</br></br><p><img src="SensorStudio/PIC/SEN_SHT21.jpg" width="25%" alt="Stickman" text-align: center ></p>
+			</li>
+		</ul>
+	</li>
+	<li>მიუერთეთ <strong>NodeMCU</strong> დაფა იმ მიკროკომპიუტერის ნებისმერ <strong>USB</strong> პორტს, რემელსაც თქვენ დაუკავშირდით <strong>Sensor studio</strong>-ოს საშუალებით</li>
+	<li>დაჭერით <strong>PROG</strong> ღილაკს და გაჩენილ მენიუში შესაბამისი ღილაკის დაჭერით აირჩიეთ, დარე გადმოწერილი ბინარული კოდი.</li>
+	<li>და ბოლოს დაჭერით <strong>UPLOAD</strong> და დაელოდეთ სანამ პროცესი არ დასრულდებ.</li>
+</ol>
+
+
+</br></br></br></br>
+<!--######################################################################################-->   
+<a class="anchor" id="Sensor_SHT21"></a>
+<div class="row  row-cols-1 row-cols-md-2 g-4 mt-3">
+	<div class="col">
+		<div class="card">
+			<div class="ms-3 mt-3">
+				<p><img src="SensorStudio/PIC/SEN_SHT21.jpg" width="60%" alt="Stickman" text-align: center ></p>
+			</div>
+			<div class="card-body">
+				<h5 class="card-title">NodeMCU & SHT21 Sensor</h5>
+				<p class="card-text">Click on the button to download the firmware of this project. You can upload the firmware to the NodeMCU board, using sensor studio or other tools.</p>
+				<a href="SensorStudio/BIN/SEN_SHT21.bin" rel="nofollow" class="btn btn-primary">Download bin</a>
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<div class="card">
+			<div class="card-header">Sensor Description</div>
+			<div class="card-body">
+			<h5 class="card-title">SHT21</h5>
+			<p class="card-text">
+SHT21, the new humidity and temperature sensor of
+Sensirion is about to set new standards in terms of size
+and intelligence: Embedded in a reflow solderable Dual
+Flat No leads (DFN) package of 3 x 3mm foot print and
+1.1mm height it provides calibrated, linearized signals in
+digital, I2C format.
+With a completely new designed CMOSens® chip, a
+reworked capacitive type humidity sensor and an
+improved band gap temperature sensor the performance
+has been lifted even beyond the outstanding level of the
+previous sensor generation (SHT1x and SHT7x). For
+example, measures have been taken to stabilize the
+behavior at high humidity levels.
+Every sensor is individually calibrated and tested. Lot
+identification is printed on the sensor and an electronic
+identification code is stored on the chip – which can be
+read out by command. Furthermore, the resolution of
+SHT21 can be changed by command (8/12bit up to
+12/14bit for RH/T), low battery can be detected and a
+checksum helps to improve communication reliability.
+With made improvements and the miniaturization of the
+sensor the performance-to-price ratio has been improved
+– and eventually, any device should benefit from the
+cutting edge energy saving operation mode. For testing
+SHT21 a new evaluation Kit EK-H4 is available. 
+			</p>
+			<!--a href="#" class="btn btn-primary">Go somewhere</a-->
+			</div>
+			<!--div class="card-footer text-muted"></div-->
+		</div>
+	</div>
+</div>
+<!--######################################################################################-->  
+<a class="anchor" id="Sensor_SHT75"></a>
+<div class="row  row-cols-1 row-cols-md-2 g-4 mt-3">
+	<div class="col">
+		<div class="card">
+			<div class="ms-3 mt-3">
+				<p><img src="SensorStudio/PIC/SEN_SHT75.jpg" width="60%" alt="Stickman" text-align: center ></p>
+			</div>
+			<div class="card-body">
+				<h5 class="card-title">NodeMCU & SHT75 Sensor</h5>
+				<p class="card-text">Click on the button to download the firmware of this project. You can upload the firmware to the NodeMCU board, using sensor studio or other tools.</p>
+				<a href="SensorStudio/BIN/SEN_SHT75.bin" rel="nofollow" class="btn btn-primary">Download bin</a>
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<div class="card">
+			<div class="card-header">Sensor Description</div>
+			<div class="card-body">
+			<h5 class="card-title">SHT75</h5>
+			<p class="card-text">
+SHT7x (including SHT71 and SHT75) is Sensirion’s family
+of relative humidity and temperature sensors with pins.
+The sensors integrate sensor elements plus signal
+processing in compact format and provide a fully
+calibrated digital output. A unique capacitive sensor
+element is used for measuring relative humidity while
+temperature is measured by a band-gap sensor. The
+applied CMOSens® technology guarantees excellent
+reliability and long term stability. Both sensors are
+seamlessly coupled to a 14bit analog to digital converter
+and a serial interface circuit. This results in superior signal
+quality, a fast response time and insensitivity to external
+disturbances (EMC).
+Each SHT7x is individually calibrated in a precision
+humidity chamber. The calibration coefficients are
+programmed into an OTP memory on the chip. These
+coefficients are used to internally calibrate the signals
+from the sensors. The 2-wire serial interface and internal
+voltage regulation allows for easy and fast system
+integration. The small size and low power consumption
+makes SHT7x the ultimate choice for even the most
+demanding applications.
+SHT7x is supplied on FR4 with pins which allows for easy
+integration or replacement. The same sensor is also
+available as surface mountable packaging (SHT1x) or on
+flex print (SHTA
+			</p>
+			<!--a href="#" class="btn btn-primary">Go somewhere</a-->
+			</div>
+			<!--div class="card-footer text-muted"></div-->
+		</div>
+	</div>
+</div>
+<!--######################################################################################--> 
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+`);
+
+
+
+
+
+
+
+

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="David Chkhaidze">
+    <meta name="generator" content="">
+    <title>Altium Designer</title>
+    <link rel="canonical" href="">
+    <!-- Bootstrap core CSS -->
+	<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+	
+    <style>
+        ._my-container {
+            border: 1px solid green;
+        }
+
+        ._my-row {
+            border: 3px solid red;
+            //height: 300px;
+        }
+
+        ._my-col {
+            border: 1px dotted blue;
+
+        }		
+    </style>	
+    <style>
+		body {
+		  margin: 0px;
+		  padding-top: 5rem;
+		  padding-bottom: 0rem;
+		  color: #5a5a5a;
+		}
+
+    </style>	
+    <!-- Custom styles for this template -->
+	<link href="Altium_Designer/sidebar.css" rel="stylesheet">
+	<!--..................-->
+	<script src="prism/prism.js"></script>
+	<link href="prism/prism.css" rel="stylesheet">
+	<!--..................-->		
+	<script id="modecode">
+	CodeMirror.defineSimpleMode("simplemode", {
+	  start: [
+		{regex: /((--\s*\w+\s*(,|\((\s*\w+\s*)|\s*\(\s*)\)?)|(--\s*(.+)))/,token: "islist"},
+		{regex: /([.]{2}[a-z_]+\s*,)/,token: "keyword"},
+		{regex: /([.]{2}\[[a-z_].*?\])/,token: "conteiner"},// ..[w]
+		{regex: /(\.\.{|\.\.})/,token: "conteiner"},// ..{}
+		{regex: /(<.*>)|\*JavaScript\*/,token: "ishtml"},//	
+		{regex: /(\(.*?\))/,token: "inn"},//
+		{regex: /alert|Panel_Open/, token: "java"},
+		{regex: /(\.\.button|\.\.input_text|\.\.##|\.\.checkbox|\.\.radio|\.\.textarea|\.\.input_password)/,token: "keyword"},
+		{regex: /(\.\.select|\.\.slider)|\.\.flip|\.\.listview|\.\.label|\.\.info/,token: "keyword"},
+		{regex: /alert|Panel_Open|put_input_text|get_input_text|put_input_Password|get_input_Password/, token: "java"},
+	  ],
+	});
+	</script>
+	<style>
+	  .CodeMirror {border: 1px solid silver; margin-bottom: 1em; height: auto;}
+	  dt { text-indent: -2em; padding-left: 2em; margin-top: 1em; }
+	  dd { margin-left: 1.5em; margin-bottom: 1em; }
+	  dt {margin-top: 1em;}
+	</style>		
+	 
+</head>
+<body>		
+	<script src="../navbar.html"></script>	
+	<!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+	<div class="tab-pane fade show active" id="nav-Structure" role="tabpanel" aria-labelledby="nav-Structure-tab">
+		<div class="row mt-3">
+			<div class="my-col col " id="myOverflow_0"></div>
+			<div class="my-col col-8 " id="myOverflow_1">
+			<!--######################################################################################--> 
+			<br> 
+			<h2 id="is_Project_Description" class="blog-post-title">Getting Started with Altium Designer (Georgian)</h2>
+			<p class="blog-post-meta">Mar 23, 2021</p>
+			<hr>
+
+
+
+PCB დაფის დიზაინი Altium Designer პროგრამის გამოყენებით.	
+</br></br>
+
+			
+			
+		<script>	
+		var player, seconds = 0;
+		function onYouTubeIframeAPIReady() {
+			console.log("player");
+			player = new YT.Player('player', {
+				events: {
+				  'onReady': onPlayerReady
+				}
+			  });
+		}
+		function onPlayerReady(event) {event.target.playVideo();}
+		function seek(sec){
+			if(player){
+				seconds += sec;
+				player.seekTo(sec, true);player.playVideo();
+			}
+		}	
+	</script>		
+			
+<!--######################################################################################-->   
+  <div class="row">
+    <div class="col-11">
+
+		<div style="max-width:700px; ">
+			<iframe id="player" width="100%" height="500" 
+			src="https://www.youtube.com/embed/Za6-vybFEhI?enablejsapi=1"
+			frameborder="0" 
+			allow="accelerometer; 
+			autoplay; 
+			clipboard-write; 
+			encrypted-media; 
+			gyroscope; 
+			picture-in-picture" 
+			allowfullscreen>
+			</iframe>
+		</div>
+    </div>
+    <div class="col-1">
+		<button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+		  -<br>Topics<br>-
+		</button>
+    </div>
+  </div>
+
+
+<!--######################################################################################--> 
+
+	<!-- Button trigger modal -->
+	<!--button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+	  Topics
+	</button-->
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-scrollable">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Topics</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+		  <div class="modal-body">
+  
+				<li><a onclick="seek(0)"     class="text-dark" data-bs-dismiss="modal"  href="#isPCB">Start</a></li>
+				<li><a onclick="seek(22)"    class="text-dark" data-bs-dismiss="modal"  href="#images">Create Project</a></li>
+				<li><a onclick="seek(67)"    class="text-dark" data-bs-dismiss="modal"  href="#images">Add Schematic file</a></li>
+				<li><a onclick="seek(106)"   class="text-dark" data-bs-dismiss="modal"  href="#images">Add component to the schematic</a></li>
+				<li><a onclick="seek(233)"   class="text-dark" data-bs-dismiss="modal"  href="#images">Create Schematic Library</a></li>
+				<li><a onclick="seek(270)"   class="text-dark" data-bs-dismiss="modal"  href="#images">Create a component to the schematic library</a></li>
+				<li><a onclick="seek(526)"   class="text-dark" data-bs-dismiss="modal"  href="#images">Create PCB Component</a></li>
+				<li><a onclick="seek(630)"   class="text-dark" data-bs-dismiss="modal"  href="#images">Create PCB Library</a></li>
+				<li><a onclick="seek(667)"   class="text-dark" data-bs-dismiss="modal"  href="#images">Preparation of the Component dimensions</a></li>
+				<li><a onclick="seek(1112)"  class="text-dark" data-bs-dismiss="modal"  href="#images">Joining PCB component to the schematic component</a></li>
+				<li><a onclick="seek(1232)"  class="text-dark" data-bs-dismiss="modal"  href="#images">Create PCB file</a></li>
+				<li><a onclick="seek(1325)"  class="text-dark" data-bs-dismiss="modal"  href="#images">Transferring the schematic to the PCB</a></li>
+				<li><a onclick="seek(1559)"  class="text-dark" data-bs-dismiss="modal"  href="#images">Wire & Net</a></li>
+				<li><a onclick="seek(1721)"  class="text-dark" data-bs-dismiss="modal"  href="#images">PCB Routing</a></li>	
+
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+
+			
+		  </div>
+
+		  
+		</div>
+	  </div>
+	</div>
+<!--######################################################################################-->  			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</div>
+			<div class="my-col col overflow-auto" id="myOverflow_2"></div>
+		</div>							
+	</div>
+	<!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+	<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>	  
+	<script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>

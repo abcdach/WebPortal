@@ -1,0 +1,157 @@
+
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  #min-width: 100%;
+  height: 32rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="David Chkhaidze">
+    <meta name="generator" content="">
+    <title>MAXIOT Systems Starter Page</title>
+    <link rel="canonical" href="">
+    <!-- Bootstrap core CSS -->
+	<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+	body {
+		padding-top: 5rem;
+	}
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+	<link href="carousel.css" rel="stylesheet">
+	<!--..................-->
+	<script src="../Gui_Engine/jquery.min.js"></script>
+	<script src="../Gui_Engine/GUI_PROCESSOR.js"></script>
+	<script src="../Gui_Engine/GUI_ELEMENTS.js"></script>
+	<script src="../NAV_SCRIPT.dg"></script>		
+	<!--..................-->
+	 
+	 
+	 
+ </head>
+ <body data-role="IS_HTML_BODY" >
+ 
+	<script src="../navbar.html"></script>	
+	
+	
+	
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+	
+	<!--
+    <div class="carousel-inner">
+	--> 
+	
+	<div class="carousel-inner" role="listbox" style="max-width:1380px; max-height:600px;">
+	
+	
+	
+      <div class="carousel-item active">
+	  
+        <img src="032.PNG"  >
+	<!--	
+  <svg src="032.PNG"  width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        --> 
+
+		
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>MAXIOT STUDIO v3.0</h1>
+            <p>MAXIOT IoT Server control web application</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+	  
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>MAXIOT Systems.</h1>
+            <p>Use this webpage as a way to get information about MAXIOT Systems..</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+	  
+      <div class="carousel-item">
+        <img src="033.PNG" />
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>MAXIOT Systems.</h1>
+            <p>Use this webpage as a way to get information about MAXIOT Systems.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+	  
+	  
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+
+
+
+
+
+
+	<main class="container">
+	  <div class="starter-template text-center py-5 px-3">
+		<h1>MAXIOT Systems Starter Page</h1>
+		<p class="lead">Use this webpage as a way to get information about MAXIOT Systems.<br> All projects and information will be collected in this web portal.</p>
+	  </div>
+	</main>
+
+
+	<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="David Chkhaidze">
+    <meta name="generator" content="">
+    <title>Sensor Studio</title>
+    <link rel="canonical" href="">
+    <!-- Bootstrap core CSS -->
+	<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+	
+    <style>
+        ._my-container {
+            border: 1px solid green;
+        }
+
+        ._my-row {
+            border: 3px solid red;
+            //height: 300px;
+        }
+
+        ._my-col {
+            border: 1px dotted blue;
+
+        }		
+    </style>	
+    <style>
+		body {
+		  margin: 0px;
+		  padding-top: 5rem;
+		  padding-bottom: 0rem;
+		  color: #5a5a5a;
+		}
+
+    </style>	
+    <!-- Custom styles for this template -->
+	<link href="SensorStudio/sidebar.css" rel="stylesheet">
+	<script src="../Gui_Engine/jquery.min.js"></script>	
+	<script src="SensorStudio/include_codemirror.html"></script>	
+	<script src="SensorStudio/article.js"></script>
+	<script src="SensorStudio/MyBase64.js"></script>
+	<!--..................-->
+	<script src="prism/prism.js"></script>
+	<link href="prism/prism.css" rel="stylesheet">
+	<!--..................-->		
+	<script id="modecode">
+	CodeMirror.defineSimpleMode("simplemode", {
+	  start: [
+		{regex: /((--\s*\w+\s*(,|\((\s*\w+\s*)|\s*\(\s*)\)?)|(--\s*(.+)))/,token: "islist"},
+		{regex: /([.]{2}[a-z_]+\s*,)/,token: "keyword"},
+		{regex: /([.]{2}\[[a-z_].*?\])/,token: "conteiner"},// ..[w]
+		{regex: /(\.\.{|\.\.})/,token: "conteiner"},// ..{}
+		{regex: /(<.*>)|\*JavaScript\*/,token: "ishtml"},//	
+		{regex: /(\(.*?\))/,token: "inn"},//
+		{regex: /alert|Panel_Open/, token: "java"},
+		{regex: /(\.\.button|\.\.input_text|\.\.##|\.\.checkbox|\.\.radio|\.\.textarea|\.\.input_password)/,token: "keyword"},
+		{regex: /(\.\.select|\.\.slider)|\.\.flip|\.\.listview|\.\.label|\.\.info/,token: "keyword"},
+		{regex: /alert|Panel_Open|put_input_text|get_input_text|put_input_Password|get_input_Password/, token: "java"},
+	  ],
+	});
+	</script>
+	<style>
+	  .CodeMirror {border: 1px solid silver; margin-bottom: 1em; height: auto;}
+	  dt { text-indent: -2em; padding-left: 2em; margin-top: 1em; }
+	  dd { margin-left: 1.5em; margin-bottom: 1em; }
+	  dt {margin-top: 1em;}
+	</style>		
+	 
+</head>
+<body>		
+	<script src="../navbar.html"></script>	
+	<script>
+	
+	$( document ).ready(function() {
+    SetSize();
+});
+	SetSize();
+
+
+	$(window).resize(function(){ SetSize();});
+	
+	function SetSize(){
+		var body = document.body,
+			html = document.documentElement;
+		var isheight = Math.max( body.scrollHeight, body.offsetHeight,html.clientHeight, html.scrollHeight, html.offsetHeight );
+		//isheight = document.body.scrollHeight;
+		//isheight = document.documentElement.scrollHeight
+		
+		console.log("isheight - "+isheight);
+		$('<style>').text("#myOverflow_0 {max-height: "+(isheight-210)+"px;}").appendTo(document.head);
+		$('<style>').text("#myOverflow_1 {max-height: "+(isheight-210)+"px;}").appendTo(document.head);
+		$('<style>').text("#myOverflow_2 {max-height: "+(isheight-210)+"px;}").appendTo(document.head);
+		$('<style>').text("#frame {width: 900px; height: 500px; }").appendTo(document.head);
+	}	
+	
+		var x1 ="https://www.w3schools.com/bootstrap/bootstrap_ref_js_tab.asp";
+		$(document).ready(function(){
+		  $(".nav-tabs a").click(function(){
+			$(this).tab('show');
+		  });
+		  $('.nav-tabs a').on('shown.bs.tab', function(event){
+			//var x = $(event.target).text();         // active tab
+			//var y = $(event.relatedTarget).text();  // previous tab
+			//$(".act span").text(x);
+			//$(".prev span").text(y);
+			//alert("Hello! I am an alert box!!");
+		  });
+		});
+		
+	</script>				
+
+
+			<div class="ms-3">
+				<nav>
+					<div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+						<a class="nav-link active" id="nav-Structure-tab" data-bs-toggle="tab" href="#nav-Structure" role="tab" aria-controls="nav-Structure" aria-selected="true">Blog & Code Library</a>
+						<a class="nav-link" id="nav-Description-tab" data-bs-toggle="tab" href="#nav-Description" role="tab" aria-controls="nav-Description" aria-selected="false">Sensor Studio</a>
+						<!--a class="nav-link" id="nav-Example-tab" data-bs-toggle="tab" href="#nav-Example" role="tab" aria-controls="nav-Example" aria-selected="false">Blog</a-->
+					</div>
+				</nav>
+				<div class="tab-content" id="nav-tabContent">
+					<!--..................-->
+					<div class="tab-pane fade show active" id="nav-Structure" role="tabpanel" aria-labelledby="nav-Structure-tab">
+						<div class="row mt-3">
+							<div class="my-col col " id="myOverflow_0">
+								<script src="SensorStudio/sidebar.html"></script>
+							</div>
+							<div class="my-col col-8 overflow-auto" id="myOverflow_1">
+
+
+
+
+
+
+
+								<script src="SensorStudio/Library.html"></script>
+
+								
+								
+								
+							</div>
+							<div class="my-col col overflow-auto" id="myOverflow_2">
+					
+							</div>
+						</div>							
+					</div>
+					<!--..................-->
+					<div class="tab-pane fade" id="nav-Description" role="tabpanel" aria-labelledby="nav-Description-tab">
+						<iframe id="frame" src="SENSOR_APP/index.html"></iframe>
+					</div>
+					<!--..................-->
+					<div class="tab-pane fade " id="nav-Example" role="tabpanel" aria-labelledby="nav-Example-tab">				
+					</div>					
+				</div>
+			</div>
+			
+			
+			
+							<!--div class="row mt-3">
+							<div class="col-lg-2  my-col overflow-auto _d_my-col" style="position:fixed;">
+								<script src="SensorStudio/sidebar.html"></script>
+							</div>
+							<div class="col-lg-10 offset-lg-2 my-col" style="position:fixed;">
+								<script src="SensorStudio/Library.html"></script>
+							</div>
+						</div>
+					</div-->				
+  <!--div class="row">
+    <div class="col-6">
+			
+				<button type="button"
+				onclick="Read_File()"
+				class="btn btn-outline-secondary btn-sm">Load</button>
+			
+				<button type="button"
+				onclick="Save_File(_UserCode_GetText_())"
+				class="btn btn-outline-secondary btn-sm">Save</button>
+			
+    </div>
+    <div class="col-6">
+		<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+				<button type="button"
+				onclick="_RunCode_(_UserCode_GetText_())"
+				class="btn btn-outline-secondary btn-sm">Run SensorStudio >></button>
+		</div>
+    </div>
+  </div-->
+
+
+					
+							
+
+				
+		<!--div class="mt-2" id="Mirror4"></div>
+		<script>
+			var editor4 = CodeMirror(document.getElementById("Mirror4"),
+			{ lineNumbers: true,tabSize: 4,indentUnit: 4,indentWithTabs: true, mode: "simplemode"});
+			editor4.setOption("theme", "duotone-light");
+			editor4.setValue("");
+			var _UserCode_Data_ = ""; 
+			function _UserCode_(data) {editor4.setValue(data); _UserCode_Data_ = data; $('#_UserCode_Text_').text(_UserCode_Data_) }
+			function _UserCode_GetText_() {return editor4.getValue();  }
+		</script>
+					</div>
+				
+
+					
+				</div>
+			</div>		
+		</div-->	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<!--div class="row my-row">
+		<div class="col-lg-6  my-col overflow-auto _d_my-col" style="position:fixed;">
+		</div>
+		<div class="col-lg-4 offset-lg-6 my-col" style="position:fixed;">
+			<div class="container text-center" >
+				<iframe id="frame" src="MAXIOT_MOB/index.html"></iframe>
+			</div>	 
+		</div>
+		<div class="col-lg-2 offset-lg-10 my-col " style="position:fixed;">
+			<script src="SensorStudio/sidebar.html"></script>
+		</div>	
+	</div-->	
+
+		
+	<script>
+		function loadIframe(iframeName, url) {
+			var $iframe = $('#' + iframeName);
+			if ($iframe.length) {
+				$iframe.attr('src',url);
+				return false;
+			}return true;
+		}
+
+
+		
+		
+		
+		
+	</script>		
+	<script src="../Footer.html"></script>
+	<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>	  
+</body>
+</html>

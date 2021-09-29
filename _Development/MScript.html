@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="David Chkhaidze">
+    <meta name="generator" content="">
+    <title>Sensor Studio</title>
+    <link rel="canonical" href="">
+    <!-- Bootstrap core CSS -->
+	<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+	
+    <style>
+        ._my-container {
+            border: 1px solid green;
+        }
+
+        ._my-row {
+            border: 3px solid red;
+            //height: 300px;
+        }
+
+        ._my-col {
+            border: 1px dotted blue;
+
+        }		
+    </style>	
+    <style>
+		body {
+		  margin: 0px;
+		  padding-top: 5rem;
+		  padding-bottom: 0rem;
+		  color: #5a5a5a;
+		}
+
+    </style>	
+	
+ 
+    <!-- Custom styles for this template -->
+	<link href="MScript/sidebar.css" rel="stylesheet">
+	<script src="../Gui_Engine/jquery.min.js"></script>	
+	<script src="MScript/include_codemirror.html"></script>	
+	<script src="MScript/article.js"></script>
+	<script src="MScript/MyBase64.js"></script>	
+	<!--..................-->
+	<script src="prism/prism.js"></script>
+	<link href="prism/prism.css" rel="stylesheet">
+	<!--..................-->		
+	<script id="modecode">
+	CodeMirror.defineSimpleMode("simplemode", {
+	  start: [
+		{regex: /((--\s*\w+\s*(,|\((\s*\w+\s*)|\s*\(\s*)\)?)|(--\s*(.+)))/,token: "islist"},
+		{regex: /([.]{2}[a-z_]+\s*,)/,token: "keyword"},
+		{regex: /([.]{2}\[[a-z_].*?\])/,token: "conteiner"},// ..[w]
+		{regex: /(\.\.{|\.\.})/,token: "conteiner"},// ..{}
+		{regex: /(<.*>)|\*JavaScript\*/,token: "ishtml"},//	
+		{regex: /(\(.*?\))/,token: "inn"},//
+		{regex: /alert|Panel_Open/, token: "java"},
+		{regex: /(\.\.button|\.\.input_text|\.\.##|\.\.checkbox|\.\.radio|\.\.textarea|\.\.input_password)/,token: "keyword"},
+		{regex: /(\.\.select|\.\.slider)|\.\.flip|\.\.listview|\.\.label|\.\.info/,token: "keyword"},
+		{regex: /alert|Panel_Open|put_input_text|get_input_text|put_input_Password|get_input_Password/, token: "java"},
+	  ],
+	});
+	</script>
+	<style>
+	  .CodeMirror {border: 1px solid silver; margin-bottom: 1em; height: auto;}
+	  dt { text-indent: -2em; padding-left: 2em; margin-top: 1em; }
+	  dd { margin-left: 1.5em; margin-bottom: 1em; }
+	  dt {margin-top: 1em;}
+	</style>		
+	 
+</head>
+<body>		
+	<script src="../navbar.html"></script>	
+	<script>
+
+	$( document ).ready(function(){
+		$("#M1").show();
+		$("#M2").hide();
+		$("#M3").hide();
+		$("#M4").hide();
+		isArticle('Page');
+		_RunCode_f2_("");
+		SetSize();
+		
+	});
+	SetSize();
+	$(window).resize(function(){SetSize();});
+	
+	function SetSize(){
+		var body = document.body,
+			html = document.documentElement;
+		var isheight = Math.max( body.scrollHeight, body.offsetHeight,html.clientHeight, html.scrollHeight, html.offsetHeight );
+		//isheight = document.body.scrollHeight;
+		//isheight = document.documentElement.scrollHeight
+		
+		isOfset = 150;
+		
+		console.log("isheight - "+isheight);
+		$('<style>').text("#myOverflow_0 {max-height: "+(isheight-isOfset)+"px;}").appendTo(document.head);
+		$('<style>').text("#myOverflow_1 {max-height: "+(isheight-isOfset)+"px;}").appendTo(document.head);
+		$('<style>').text("#myOverflow_2 {max-height: "+(isheight-isOfset)+"px;}").appendTo(document.head);
+		$('<style>').text("#myOverflow_3 {max-height: "+(isheight-isOfset)+"px;}").appendTo(document.head);
+		$('<style>').text("#myOverflow_4 {max-height: "+(isheight-isOfset)+"px;}").appendTo(document.head);
+		$('<style>').text("#myOverflow_5 {max-height: "+(isheight-isOfset)+"px;}").appendTo(document.head);
+		$('<style>').text("#myOverflow_6 {max-height: "+(isheight-isOfset)+"px;}").appendTo(document.head);
+		$('<style>').text("#myOverflow_7 {max-height: "+(isheight-isOfset)+"px;}").appendTo(document.head);
+		$('<style>').text("#myOverflow_8 {max-height: "+(isheight-isOfset)+"px;}").appendTo(document.head);
+		
+		$('<style>').text("#myOverflow_sidebar1 {max-width: 600px;max-height: "+(isheight-isOfset)+"px;}").appendTo(document.head);
+		$('<style>').text("#myOverflow_sidebar2 {max-width: 600px;max-height: "+(isheight-isOfset)+"px;}").appendTo(document.head);
+		$('<style>').text("#myOverflow_sidebar3 {max-width: 600px;max-height: "+(isheight-isOfset)+"px;}").appendTo(document.head);
+		
+		var FrameHeight = isheight-isOfset;
+		if(FrameHeight > 600)FrameHeight=600;
+		$('<style>').text("#frame1 {width: 360px; height: "+FrameHeight+"px; border: 1px solid Gainsboro;}").appendTo(document.head);
+		$('<style>').text("#frame2 {width: 360px; height: "+FrameHeight+"px; border: 1px solid Gainsboro;}").appendTo(document.head);
+		$('<style>').text("#frame3 {width: 360px; height: "+FrameHeight+"px; border: 1px solid Gainsboro;}").appendTo(document.head);
+		editor3.setSize(null, isheight-220);
+		editor4.setSize(null, isheight-213);		
+		
+		//console.log(isheight);
+	}	
+	
+	
+	
+	
+	
+	
+	
+	</script>				
+	<script>
+	
+		var Page_Refresh_Blog = 1;
+		var Page_Refresh_Code_Library = 1;
+		var Page_Refresh_User_Code = 1;
+	
+		var x1 ="https://www.w3schools.com/bootstrap/bootstrap_ref_js_tab.asp";
+		$(document).ready(function(){
+		  $(".nav-tabs a").click(function(){
+			$(this).tab('show');
+		  });
+		  $('.nav-tabs a').on('shown.bs.tab', function(event){
+			var x = $(event.target).text();         // active tab
+			var y = $(event.relatedTarget).text();  // previous tab
+			//$(".act span").text(x);
+			//$(".prev span").text(y);
+			//alert("Hello! I am an alert box!!");
+			if(x==="Code Library"){
+				if(Page_Refresh_Code_Library === 1){
+					Page_Refresh_Code_Library = 0;
+					_RunCode_f1_("");
+					RefreshValue();
+				}			
+			}
+			if(x==="User Code"){
+				if(Page_Refresh_User_Code === 1){
+					Page_Refresh_User_Code = 0;
+					_RunCode_f3_("");
+					//_UserCode_(localStorage.getItem('User_Code'));
+					//_UserCode_("yyyyyyy");
+					//localStorage.getItem('User_Code')
+					//localStorage.setItem('User_Code',Server_IP.GetValue());
+				}			
+			}
+		
+			console.log(x);
+			//console.log(y);
+			//console.log(x);
+			//console.log(x);
+			
+		  });
+		});
+	</script>
+
+
+	<div class="ms-3">
+		<nav>
+			<div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+				<a class="nav-link active" id="nav-1-tab" data-bs-toggle="tab" 
+				href="#nav-1" role="tab" aria-controls="nav-1" aria-selected="true">Blog</a>
+				<a class="nav-link" id="nav-2-tab" data-bs-toggle="tab" 
+				href="#nav-2" role="tab" aria-controls="nav-2" aria-selected="false">Code Library</a>
+				<a class="nav-link" id="nav-3-tab" data-bs-toggle="tab" 
+				href="#nav-3" role="tab" aria-controls="nav-3" aria-selected="false">User Code</a>
+			</div>
+		</nav>
+		<div class="tab-content" id="nav-tabContent">
+			<!--nav-1..................-->
+			<div class="tab-pane fade show active" id="nav-1" role="tabpanel" aria-labelledby="nav-1-tab">
+				
+				
+				
+				
+
+	
+
+				<div class="row mt-3">
+					<!--..................-->
+					<style>
+					.my-sidebar2{
+						-ms-flex: 0 0 210px;
+						flex: 0 0 210px;
+						_background-color: greenyellow; 
+					} 
+					</style>
+					<div class="my-col col my-sidebar2" id="myOverflow_3">
+						<script src="MScript/sidebar2.html"></script>
+					</div>
+					<!--..................-->
+					<div class="my-col col overflow-auto" id="myOverflow_4">
+						<script src="MScript/Blog.html"></script>
+					</div>
+					<!--..................-->
+					<style>
+					.my-mobile2{
+						-ms-flex: 0 0 270px;
+						flex: 0 0 270px;
+						_background-color: greenyellow; 
+					} 
+					</style>
+					<div class="my-col col my-mobile2" id="myOverflow_5">
+						<div class="container">
+							<iframe id="frame2" src="MAXIOT_MOB/index.html"></iframe>
+						</div>
+					</div>
+				</div>	
+
+				
+			</div>
+			<!--..................-->
+			<div class="tab-pane fade " id="nav-2" role="tabpanel" aria-labelledby="nav-2-tab">
+			
+			
+			
+
+				<div class="row mt-3">
+					<!--..................-->
+					<style>
+					.my-sidebar1{
+						-ms-flex: 0 0 210px;
+						flex: 0 0 210px;
+						_background-color: greenyellow; 
+					} 
+					</style>
+					<div class="my-col col my-sidebar1" id="myOverflow_0">
+						<script src="MScript/sidebar1.html"></script>
+					</div>
+					<!--..................-->
+					<div class="my-col col overflow-auto" id="myOverflow_1">
+						<div class="mt-1">
+							<script src="MScript/Library.html"></script>
+						</div>
+					</div>
+					<!--..................-->
+					<style>
+					.my-mobile1{
+						-ms-flex: 0 0 270px;
+						flex: 0 0 270px;
+						_background-color: greenyellow; 
+					} 
+					</style>
+					<div class="my-col col my-mobile1" id="myOverflow_2">
+						<div class="container">
+							<iframe id="frame1" src="MAXIOT_MOB/index.html"></iframe>
+						</div>
+					</div>
+				</div>					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			<!--..................-->
+			<div class="tab-pane fade " id="nav-3" role="tabpanel" aria-labelledby="nav-3-tab">	
+
+
+
+				<div class="row mt-3">
+					<!--..................-->
+					<style>
+					.my-sidebar3{
+						-ms-flex: 0 0 210px;
+						flex: 0 0 210px;
+						_background-color: greenyellow; 
+					} 
+					</style>
+					<div class="my-col col my-sidebar3" id="myOverflow_6">
+						<script src="MScript/sidebar3.html"></script>
+					</div>
+					<!--..................-->
+					
+					<div class="my-col col overflow-auto" id="myOverflow_7">
+						<div class="mt-1">
+							<div class="row">
+								<div class="col-6">
+										
+											<button type="button"
+											onclick="Read_File()"
+											class="btn btn-outline-secondary btn-sm">Load</button>
+										
+											<button type="button"
+											onclick="Save_File(_UserCode_GetText_())"
+											class="btn btn-outline-secondary btn-sm">Save</button>
+											
+								</div>
+								<div class="col-6">
+									<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+											<button type="button"
+											onclick="_RunCode_f3_(_UserCode_GetText_())"
+											class="btn btn-outline-secondary btn-sm">Run MScript >></button>
+									</div>
+								</div>
+							</div>	
+
+							<div class="mt-2" id="Mirror4"></div>
+							<script>
+								var editor4 = CodeMirror(document.getElementById("Mirror4"),
+								{ lineNumbers: true,tabSize: 4,indentUnit: 4,indentWithTabs: true, mode: "simplemode"});
+								editor4.setOption("theme", "duotone-light");
+								editor4.setValue("");
+								var _UserCode_Data_ = ""; 
+								function _UserCode_(data) {editor4.setValue(data); _UserCode_Data_ = data; $('#_UserCode_Text_').text(_UserCode_Data_) }
+								function _UserCode_GetText_() {return editor4.getValue();  }
+							</script> 
+						</div>
+  
+					</div>
+					<!--..................-->
+					<style>
+					.my-mobile3{
+						-ms-flex: 0 0 270px;
+						flex: 0 0 270px;
+						_background-color: greenyellow; 
+					} 
+					</style>
+					<div class="my-col col my-mobile3" id="myOverflow_8">
+						<div class="container">
+							<iframe id="frame3" src="MAXIOT_MOB/index.html"></iframe>
+						</div>
+					</div>
+				</div>	
+
+
+
+
+
+			
+			</div>					
+		</div>
+	</div>
+	
+
+		
+	<script>
+		function loadIframe(iframeName, url) {
+			var $iframe = $('#' + iframeName);
+			if ($iframe.length) {
+				$iframe.attr('src',url);
+				return false;
+			}return true;
+		}
+
+
+		
+		
+		function _RunCode_f1_(data){
+			var b64 = Base64.encode(data);
+			loadIframe('frame1','MAXIOT_MOB/index.html?script='+b64);
+		}
+		function _RunCode_f2_(data){
+			var b64 = Base64.encode(data);
+			loadIframe('frame2','MAXIOT_MOB/index.html?script='+b64);
+		}		
+		function _RunCode_f3_(data){
+			//localStorage.setItem('User_Code',data);
+			//console.log(data);
+			//console.log(localStorage.getItem('User_Code'));
+			var b64 = Base64.encode(data);
+			loadIframe('frame3','MAXIOT_MOB/index.html?script='+b64);
+		}		
+		
+	var isfileName = "UserCode.txt"
+	function Read_File() {
+		var input = document.createElement('input');
+		input.type = 'file';
+		input.onchange = e => { 
+		   // getting a hold of the file reference
+		   var file = e.target.files[0]; //console.log(file.name);
+		   isfileName = file.name;
+		   // setting up the reader
+		   var reader = new FileReader();
+		   reader.readAsText(file); // this is reading as data url
+		   // here we tell the reader what to do when it's done reading...
+		   reader.onload = readerEvent => {
+			  var content = readerEvent.target.result; // this is the content!
+			  console.log(content);
+			  editor4.setValue(content);
+		   }
+		}
+		input.click();
+	}			
+		
+	function Save_File(is_data) {
+		var isFile;
+		var fname = prompt("Please enter file name:", isfileName);
+		if (fname == null || fname == "") {
+		} else {
+			let a = document.createElement('a');
+			a.href = "data:application/octet-stream,"+encodeURIComponent(is_data);
+			a.download = fname;
+			a.click();
+		}
+	}		
+
+	</script>		
+	<script src="../Footer.html"></script>
+	<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>	  
+</body>
+</html>

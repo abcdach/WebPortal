@@ -1,0 +1,87 @@
+	<!div class="row my-row">
+		<!--.##################-->
+		<div class="col-lg-6  my-col overflow-auto _d_my-col" style="position:fixed;">
+		<!--.##################-->
+			<div class="ms-3">
+				<nav>
+					<div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+						<a class="nav-link active" id="nav-Structure-tab" data-bs-toggle="tab" href="#nav-Structure" role="tab" aria-controls="nav-Structure" aria-selected="true">Library</a>
+						<a class="nav-link" id="nav-Description-tab" data-bs-toggle="tab" href="#nav-Description" role="tab" aria-controls="nav-Description" aria-selected="false">User Code</a>
+						<a class="nav-link" id="nav-Example-tab" data-bs-toggle="tab" href="#nav-Example" role="tab" aria-controls="nav-Example" aria-selected="false">MScript Blog</a>
+					</div>
+				</nav>
+				<div class="tab-content" id="nav-tabContent">
+					<!--Library.................-->
+					<div class="tab-pane fade show active" id="nav-Structure" role="tabpanel" aria-labelledby="nav-Structure-tab">
+						
+						
+
+						<div class="row">
+							<div class="col-sm">
+								<script src="MScript/sidebar.html"></script>
+							</div>
+							<div class="col-sm">
+								<script src="MScript/Library.html"></script>
+							</div>
+						</div>
+
+
+						
+					</div>
+					<!--User Code..................-->
+					<div class="tab-pane fade" id="nav-Description" role="tabpanel" aria-labelledby="nav-Description-tab">
+						
+
+
+					<div class="row">
+						<div class="col-6">
+						
+							<button type="button"
+							onclick="Read_File()"
+							class="btn btn-outline-secondary btn-sm">Load</button>
+						
+							<button type="button"
+							onclick="Save_File(_UserCode_GetText_())"
+							class="btn btn-outline-secondary btn-sm">Save</button>
+						
+						</div>
+						<div class="col-6">
+							<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+									<button type="button"
+									onclick="_RunCode_(_UserCode_GetText_())"
+									class="btn btn-outline-secondary btn-sm">Run MScript >></button>
+							</div>
+						</div>
+					</div>
+
+					<div class="mt-2" id="Mirror4"></div>
+					<script>
+						var editor4 = CodeMirror(document.getElementById("Mirror4"),
+						{ lineNumbers: true,tabSize: 4,indentUnit: 4,indentWithTabs: true, mode: "simplemode"});
+						editor4.setOption("theme", "duotone-light");
+						editor4.setValue("");
+						var _UserCode_Data_ = ""; 
+						function _UserCode_(data) {editor4.setValue(data); _UserCode_Data_ = data; $('#_UserCode_Text_').text(_UserCode_Data_) }
+						function _UserCode_GetText_() {return editor4.getValue();  }
+					</script>
+					</div>
+					<!--MScript Blog..................-->
+					<div class="tab-pane fade " id="nav-Example" role="tabpanel" aria-labelledby="nav-Example-tab">				
+					</div>
+					<!--..................-->
+				</div>
+			</div>		
+		</div>
+		<!--.##################-->		
+		<div class="col-lg-4 offset-lg-6 my-col" style="position:fixed;">
+		<!--.##################-->
+			<div class="container text-center" >
+				<iframe id="frame" src="MAXIOT_MOB/index.html"></iframe>
+			</div>	 
+		</div>
+		<!--.##################-->
+		<div class="col-lg-2 offset-lg-10 my-col " style="position:fixed;">
+		<!--.##################-->
+			<script src="MScript/sidebar.html"></script>
+		</div>	
+	</div>	

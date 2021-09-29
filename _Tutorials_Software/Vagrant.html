@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="David Chkhaidze">
+    <meta name="generator" content="">
+    <title>Vagrant</title>
+    <link rel="canonical" href="">
+    <!-- Bootstrap core CSS -->
+	<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+	
+    <style>
+        ._my-container {
+            border: 1px solid green;
+        }
+
+        ._my-row {
+            border: 3px solid red;
+            //height: 300px;
+        }
+
+        ._my-col {
+            border: 1px dotted blue;
+
+        }		
+    </style>	
+    <style>
+		body {
+		  margin: 0px;
+		  padding-top: 5rem;
+		  padding-bottom: 0rem;
+		  color: #5a5a5a;
+		}
+
+    </style>	
+    <!-- Custom styles for this template -->
+	<link href="Vagrant/sidebar.css" rel="stylesheet">
+	<!--..................-->
+	<script src="prism/prism.js"></script>
+	<link href="prism/prism.css" rel="stylesheet">
+	<!--..................-->		
+	<script id="modecode">
+	CodeMirror.defineSimpleMode("simplemode", {
+	  start: [
+		{regex: /((--\s*\w+\s*(,|\((\s*\w+\s*)|\s*\(\s*)\)?)|(--\s*(.+)))/,token: "islist"},
+		{regex: /([.]{2}[a-z_]+\s*,)/,token: "keyword"},
+		{regex: /([.]{2}\[[a-z_].*?\])/,token: "conteiner"},// ..[w]
+		{regex: /(\.\.{|\.\.})/,token: "conteiner"},// ..{}
+		{regex: /(<.*>)|\*JavaScript\*/,token: "ishtml"},//	
+		{regex: /(\(.*?\))/,token: "inn"},//
+		{regex: /alert|Panel_Open/, token: "java"},
+		{regex: /(\.\.button|\.\.input_text|\.\.##|\.\.checkbox|\.\.radio|\.\.textarea|\.\.input_password)/,token: "keyword"},
+		{regex: /(\.\.select|\.\.slider)|\.\.flip|\.\.listview|\.\.label|\.\.info/,token: "keyword"},
+		{regex: /alert|Panel_Open|put_input_text|get_input_text|put_input_Password|get_input_Password/, token: "java"},
+	  ],
+	});
+	</script>
+	<style>
+	  .CodeMirror {border: 1px solid silver; margin-bottom: 1em; height: auto;}
+	  dt { text-indent: -2em; padding-left: 2em; margin-top: 1em; }
+	  dd { margin-left: 1.5em; margin-bottom: 1em; }
+	  dt {margin-top: 1em;}
+	</style>		
+	 
+</head>
+<body>		
+	<script src="../navbar.html"></script>	
+	<!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+	<div class="tab-pane fade show active" id="nav-Structure" role="tabpanel" aria-labelledby="nav-Structure-tab">
+		<div class="row mt-3">
+			<div class="my-col col " id="myOverflow_0"></div>
+			<div class="my-col col-8 " id="myOverflow_1">
+
+<!--######################################################################################-->  
+<h2 id="Vagrant" class="blog-post-title">Vagrant</h2>
+<p class="blog-post-meta">April 28, 2021 by <a href="#">David Chkhaidze</a></p>
+<p>ამ ბლოგში განხილულია Vagrant-თან დაკავშირებული საკითხები.</p>
+<hr>
+<p>
+<h4>მოკლე აღწერა</h4>
+<strong>Vagrant</strong>-ტი წარმოადგენს (ღია კოდის) პროგრამას, რომელიც განკუთვნია იმისთვის რომ შევქმნათ, განცალკევებული ვირტულაური გარემო.
+ეს გარემო წარმოადგენს ოპერაციულ სისტემა ლინუქს, რომელიც აბსოლუტურად იზოლირებულია ძირითადი ოპერაციული სისტემისგან, შესაბამისად ეს გვაძლევს ჩვენ საშუალებას
+შევქნათ პროგრამული უზრუნველყოფა, გარე ფაქტორებიდან თავისუფალ გარემოში. <strong>Vagrant</strong>-ტი მიშაობს <strong>VirtualBox</strong>-თან ერთად.
+</br></br></br>
+
+<h4>დასაინსტალირებელი პროგრამები</h4>
+<p><strong>Sensor studio</strong> Vagrant-ტი საჭიროებს გარკვეული პროგრამების დაინსტალირებას:</p>
+<ul>
+  <li><a target="_blank" href="https://www.vagrantup.com/">Vagrant Development Environment</a></li>
+  <li><a target="_blank" href="https://www.virtualbox.org/">VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product</a></li>
+</ul>
+</br>
+<h4>ინსტრუქცია (Windows)</h4>
+ყველა საჭირო პროგრამების დაინსტალირების შემდეგ, შეგვიძლია დავიწყოთ ვირტულაური გარემო შექნის პროცესი.
+ამისთვის კომანდა cmd-ით გამოვიძახოთ Windows-სის სტანდარტული, კომანდების ინტერპრეტატორი. ამის შემდეგ 
+ყველა შემდგომი ბრძანებები აიკრიფება ინტერპრეტატორის ტერმინალში.
+</br>
+პირვლე რიგში შევქმნათ ფოლდერი სადაც განთავსდება ვირტუალური გარემოსთვის საჭირო ფაილები. 
+<pre  style="max-height: 30em; width: 60em;  _overflow: auto; font-size: 0.75em;"><code class="language-bash _line-numbers">
+mkdir MyVAGRANT
+cd MyVAGRANT
+
+</script></code></pre>
+მოვახდინოთ Vagrant-ტის ინიცალიზაცია 
+<pre  style="max-height: 30em; width: 60em;  _overflow: auto; font-size: 0.75em;"><code class="language-bash _line-numbers">
+vagrant init hashicorp/bionic64
+
+</script></code></pre>
+გავააქტიუროთ ვირტუალური მანქანა
+<pre  style="max-height: 30em; width: 60em;  _overflow: auto; font-size: 0.75em;"><code class="language-bash _line-numbers">
+vagrant up
+
+</script></code></pre>
+გავააქტიუროთ ვირტუალური გარემოს SSH სესია
+<pre  style="max-height: 30em; width: 60em;  _overflow: auto; font-size: 0.75em;"><code class="language-bash _line-numbers">
+vagrant ssh
+
+</script></code></pre>
+იმის შემდეგ რაც გაიხნება SSH სესია, ჩვენ შეგვიძლია განვაახლოთ ვირტულური გარემოს ოპერაციული სისტემა, შემდეგი ბრძანებების გამოყენებთ
+<pre  style="max-height: 30em; width: 60em;  _overflow: auto; font-size: 0.75em;"><code class="language-bash _line-numbers">
+vagrant@vagrant:~$ sudo apt-get update
+vagrant@vagrant:~$ sudo apt-get upgrade
+
+</script></code></pre>
+SSH სესიიდან გამოსვლის შემთხვევაში აკრიფედ შემდეგი ბრძანება:
+<pre  style="max-height: 30em; width: 60em;  _overflow: auto; font-size: 0.75em;"><code class="language-bash _line-numbers">
+vagrant@vagrant:~$ logout
+
+</script></code></pre>
+იმისთვის რომ წავშალოთ ვირტუალური მანქანა, ამისთვის cmd ტერმინალის საშუალებით შევიდეთ ფოლდერში სადაც განთავსებულია ვირტუალური გარემო და ავკრიფო შემდეგი ბრძანება:
+<pre  style="max-height: 30em; width: 60em;  _overflow: auto; font-size: 0.75em;"><code class="language-bash _line-numbers">
+vagrant destroy
+
+</script></code></pre>
+იმისთვის რომ დავუბრუნდეთ ვირტუალური მანქანას, მაგალითად ოპრაციული სისტემის რესტარტის შემდეგ ამისთვის 
+cmd ტერმინალის საშუალებით შევიდეთ ფოლდერში სადაც განთავსებულია ვირტუალური მანქანა 
+და შემდეგ გავააქტიუროთ ვირტუალური გარემოს SSH სესია:
+<pre  style="max-height: 30em; width: 60em;  _overflow: auto; font-size: 0.75em;"><code class="language-bash _line-numbers">
+vagrant up
+vagrant ssh
+
+</script></code></pre>
+</br>
+<h4>დასკვნა</h4>
+<strong>Vagrant</strong>-ტის საშუალებით ჩვენ შეგვიძლია შევქმნათ ოპერაციულ სისტემა ლინუქსზე დაფუძნებული ვირტუალური სამუშაო გარემო, რომელიც აბსოლუტურა იქნება 
+იზოლირებული ძირიტადი ოპერაციული სისტემიდან ან სხვა ასეტივე ვირტულაური გარემოდან, რაც ძალიან მნიშვნელოვანია სხვადასხვა პროგრამული უზრუნველყოფის შექმნის და ტესტირების პროცეში.
+</br></br>
+<h4>გამოყენებული რესურსები</h4>
+<p>ბლოგის შექმნის პროცეში იყო გამოყენებული შემდეგი რესურსები:</p>
+<ul>
+  <li><a target="_blank" href="https://learn.hashicorp.com/tutorials/vagrant/getting-started-index">Vagrant - Quick Start</a></li>
+</ul>
+</br>
+
+<!--######################################################################################--> 
+
+			</div>
+			<div class="my-col col overflow-auto" id="myOverflow_2"></div>
+		</div>							
+	</div>
+	<!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+	<script src="../Footer.html"></script>
+	<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>	  
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MAXIOT</title>
+	<link rel="shortcut icon" href="MOB/icon.png">
+	<!--..................-->
+	<link rel="stylesheet" href="MOB/js/jquery/css/themes/default/jquery.mobile.icons-1.4.5.min.css">
+	<link rel="stylesheet" href="MOB/js/jquery/css/themes/default/jquery.mobile.icons-1.4.5.min.css">
+	<link rel="stylesheet" href="MOB/js/jquery/css/theme-classic.css">
+	<link rel="stylesheet" href="MOB/js/jquery/css/themes/default/jquery.mobile-1.4.5.min.css">
+	<script src="MOB/js/jquery/js/jquery.min.js"></script>
+	<script src="MOB/js/jquery/js/jquery.mobile-1.4.5.min.js"></script>
+	<!--..................-->
+	<script src="MOB/js/paho-mqtt-min.js"></script>
+	<script src="MOB/js/_MScript.mini.js"></script>	
+	<!--..................-->	
+	<script src="SCRIPT.dg"></script>
+	<!--..................-->	
+	<style>
+	.ui-icon-myicon:after {
+	    background-image: url("MyPIC/111.png");
+	    /* Make your icon fit */
+	    background-size: 18px 18px;
+	}
+	</style>	
+<script>
+$(document).on('pagebeforecreate',"#page_1", function(){
+	var url_string =  window.location.href;
+	var url = new URL(url_string);
+	var url_script_B64 = url.searchParams.get("script");
+	var url_script="";	
+
+	if (url_script_B64 != null)
+	{
+		for (i = 0; i < 1000; i++)
+		{
+			var doo = url_script_B64.indexOf(" ");
+			if(doo === -1)break;
+			url_script_B64 = url_script_B64.replace(" ","+");
+		}	
+		url_script = Base64.decode(url_script_B64);
+		GUI_Processor(url_script);
+	}
+	else
+	{
+		GUI_Processor(SCRIPT);
+	}
+});
+</script>
+</head>
+<body data-role="IS_HTML_BODY">
+	<div  data-role="IS_STYLE" ></div>
+	<div  data-role="IS_JAVA_SCRIPT" ></div>
+	<!-- ####################################################################################### -->
+	<div data-role="page" id="page_1">
+		<div data-role="header" id="header_1">
+			<h1><span id="MyHeader_Text_1"></span></h1>
+			<div data-role="navbar">
+				<div data-role="navbar_1" ></div>
+			</div>
+		</div><!-- /header -->
+		<div data-role="content_1" class="ui-content" role="main"></div>	
+		<div data-role="panel_1" ></div>
+		<div data-role="footer" data-position="fixed" >
+			<h1> </h1>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+	<!-- ####################################################################################### -->
+</body>
+</html>

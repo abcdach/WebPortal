@@ -1,0 +1,25 @@
+<pre  style="max-height: 15em; overflow: auto; font-size: 0.75em;" >
+<code class="language-python line-numbers"  >
+</code>
+</pre>
+---------------------------------------------------------
+<script src="SensorStudio/Library.html"></script>
+document.write(`
+
+`);
+---------------------------------------------------------
+
+
+<h4>სერვერის კოდი</h4>
+<p></p>
+<a href="#">you're a firework</a>
+<a href="#" target="_blank">thesitewizard.com</a>
+</br>
+<hr>
+<strong></strong>
+
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>

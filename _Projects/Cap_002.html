@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="David Chkhaidze">
+    <meta name="generator" content="">
+    <title>Sensor Studio</title>
+    <link rel="canonical" href="">
+    <!-- Bootstrap core CSS -->
+	<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+	
+    <style>
+        ._my-container {
+            border: 1px solid green;
+        }
+
+        ._my-row {
+            border: 3px solid red;
+            //height: 300px;
+        }
+
+        ._my-col {
+            border: 1px dotted blue;
+
+        }		
+    </style>	
+    <style>
+		body {
+		  margin: 0px;
+		  padding-top: 5rem;
+		  padding-bottom: 0rem;
+		  color: #5a5a5a;
+		}
+
+    </style>	
+    <!-- Custom styles for this template -->
+	<link href="Cap_002/sidebar.css" rel="stylesheet">
+	<!--..................-->
+	<script src="prism/prism.js"></script>
+	<link href="prism/prism.css" rel="stylesheet">
+	<!--..................-->		
+	<script id="modecode">
+	CodeMirror.defineSimpleMode("simplemode", {
+	  start: [
+		{regex: /((--\s*\w+\s*(,|\((\s*\w+\s*)|\s*\(\s*)\)?)|(--\s*(.+)))/,token: "islist"},
+		{regex: /([.]{2}[a-z_]+\s*,)/,token: "keyword"},
+		{regex: /([.]{2}\[[a-z_].*?\])/,token: "conteiner"},// ..[w]
+		{regex: /(\.\.{|\.\.})/,token: "conteiner"},// ..{}
+		{regex: /(<.*>)|\*JavaScript\*/,token: "ishtml"},//	
+		{regex: /(\(.*?\))/,token: "inn"},//
+		{regex: /alert|Panel_Open/, token: "java"},
+		{regex: /(\.\.button|\.\.input_text|\.\.##|\.\.checkbox|\.\.radio|\.\.textarea|\.\.input_password)/,token: "keyword"},
+		{regex: /(\.\.select|\.\.slider)|\.\.flip|\.\.listview|\.\.label|\.\.info/,token: "keyword"},
+		{regex: /alert|Panel_Open|put_input_text|get_input_text|put_input_Password|get_input_Password/, token: "java"},
+	  ],
+	});
+	</script>
+	<style>
+	  .CodeMirror {border: 1px solid silver; margin-bottom: 1em; height: auto;}
+	  dt { text-indent: -2em; padding-left: 2em; margin-top: 1em; }
+	  dd { margin-left: 1.5em; margin-bottom: 1em; }
+	  dt {margin-top: 1em;}
+	</style>		
+	 
+</head>
+<body>		
+	<script src="../navbar.html"></script>	
+	<!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+	<div class="tab-pane fade show active" id="nav-Structure" role="tabpanel" aria-labelledby="nav-Structure-tab">
+		<div class="row mt-3">
+			<div class="my-col col " id="myOverflow_0"></div>
+			<div class="my-col col-8 " id="myOverflow_1">
+			<!--######################################################################################--> 
+			<br> 
+			<h2 id="is_Project_Description" class="blog-post-title">Photon Mining</h2>
+			<p class="blog-post-meta">SDSU-G EE and CE Capstone Project [ Mentor: David Chkhaidze ]</p>
+			<hr>
+			Photon Mining is a project that is under development by 5 engineering students from San Diego State University – Georgia. 
+			The project consists of a smart solar panel that can track the sun for maximum power efficiency. 
+			In addition to the tracking ability, the smart solar panel also uses an IoT device to send numerous data 
+			(current drawn, the voltage across the battery, the power generated, light intensity, etc.) to the server. 
+			The project will also utilize a smartphone application where the user can view all of the data in a very user-friendly environment.
+			<p>
+			<h4>Tsotne Karchava</h4>
+			<li>Guga Kupradze</li>
+			<li>Timur Ozdemir</li>
+			<li>Dachi Janelidze</li>
+			<li>Luka Pantsulaia</li>
+			</br>
+
+			<h4 id="is_Video_presentation">Video presentation of the project.</h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7IqUysfaXxc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</br></br></br>
+			<!--######################################################################################-->
+			<h4 id="is_Project_Poster">Project Poster.</h4>
+			<img src="Cap_002/poster.png" width="500" alt="...">
+			</br></br></br>
+			<!--######################################################################################--> 
+			<h4>Files</h4>
+			<li><a href="Cap_002/Presentation.pptx">Presentation.pptx</a></li>
+			</br></br></br>
+			<!--######################################################################################--> 			
+			</div>
+			<div class="my-col col overflow-auto" id="myOverflow_2"></div>
+		</div>							
+	</div>
+	<!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+	<script src="../Footer.html"></script>
+	<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>	  
+</body>
+</html>

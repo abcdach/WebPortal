@@ -1,0 +1,17 @@
+
+
+var SCRIPT =`
+..[page],1
+..{
+	..header_text,This is a page 1
+	..create_page,2
+	..button, Go to page 2, Page_change('2');
+	
+..}
+..[page],2
+..{
+	..header_text,This is a page 2
+	..button, Go to page 1, Page_change('1');
+..}	
+`;
+
